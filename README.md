@@ -4,6 +4,8 @@
 
 3D visualization of music using Three.js and web audio API
 
+(Try it here)[http://3d-music-visualizer.std-926.ist.mospolytech.ru]
+
 ### Main screen
 
 <img src="resources/image.png">
