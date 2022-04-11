@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Music Visualizer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: black;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        #left, #right {
+            position: relative;
+            height: 100%;
+            width: 50%;
+        }
+
+        #left {
+            background-color: #101313;
+        }
+
+        #right {
+            background-color: #9b59b6;
+        }
+
+        .player-left, .player-right {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .player-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        .player-right{
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        @media (orientation: portrait) {
+            .container {
+                flex-direction: column;
+            }
+
+            #left, #right {
+                width: 100%;
+                height: 50%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="left">
+        <div class="player-left">
+            <audio id="audio-left" src="media/SUPER_RELAKS_DABSTEP_%5BRelax_Dubstep%5D-2014_(RU.MUSIC-LORD.COM).mp3" controls>
+        </div>
+    </div>
+    <div id="right">
+        <div class="player-right">
+            <audio id="audio-right" src="media/SUPER_RELAKS_DABSTEP_%5BRelax_Dubstep%5D-2014_(RU.MUSIC-LORD.COM).mp3" controls>
+        </div>
+    </div>
+</div>
+
+<script src="../dist/index.js"></script>
+<script>
+  
+    MusicVisualizer.init(document.getElementById("audio-left"), document.getElementById("left"));
+    MusicVisualizer.init(document.getElementById("audio-right"), document.getElementById("right"));
+
+</script>
+</body>
+</html>
