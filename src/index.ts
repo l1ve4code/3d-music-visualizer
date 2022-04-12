@@ -20,10 +20,10 @@ function init(audio: HTMLAudioElement, container: HTMLElement | Window = documen
             value: new Uint8Array(),
         },
     };
-    const audioContext = new window.AudioContext();
-    const audioElement = audio;
 
-    const source = audioContext.createMediaElementSource(audioElement);
+    const audioContext = new window.AudioContext();
+
+    const source = audioContext.createMediaElementSource(audio);
     const analyser = audioContext.createAnalyser();
     source.connect(analyser);
     analyser.connect(audioContext.destination);

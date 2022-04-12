@@ -14,7 +14,7 @@ module.exports = ({development}) => ({
         ],
     },
     resolve: {
-        extensions: [".ts"],
+        extensions: [".ts", ".js"],
     },
     output: {
         library: {
