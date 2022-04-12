@@ -10,6 +10,10 @@
 
 <img src="resources/image.png">
 
+### Additional screen
+
+<img src = "resources/many.png">
+
 ### Technologies
 
 * Language: **TS, JS**
@@ -30,11 +34,29 @@ npm install
 ```
 
 **Thirdly** run project
+
+### For watch
+
 ```cmd
-npm run dev
+npm run watch
 ```
+
+### For build
+
+```cmd
+npm run build
+```
+
 
 ## Author
 
 * Telegram: **[@live4code](https://t.me/live4code)**
 * Email: **steven.marelly@gmail.com**
+
+## Contributors ✨
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Liverdox"><img src="https://avatars.githubusercontent.com/u/64814413?v=4" width="100px;" alt=""/><br /><sub><b>Liverdox</b></sub></a></td>
+  </tr>
+</table>
