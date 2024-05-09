@@ -1,11 +1,9 @@
 import * as THREE from "three";
-import Stats from "three/examples/jsm/libs/stats.module.js";
-
 import shaders from "./shaders";
 import planeMeshParameters from "./planeMeshParameters";
 
 
-function init(audio: HTMLAudioElement, container: HTMLElement | Window = document.body, fps = false) {
+function init(audio: HTMLAudioElement, container: HTMLElement | Window = document.body) {
     const uniforms = {
         u_time: {
             type: "f",
@@ -114,19 +112,11 @@ function init(audio: HTMLAudioElement, container: HTMLElement | Window = documen
             idRequestAnimationFrame = requestAnimationFrame(animate);
             render();
         }
-        if(fps) {
-            const stats = Stats();
-            document.body.appendChild(stats.dom);
-            animate = () => {
-                idRequestAnimationFrame = requestAnimationFrame(animate);
-                render();
-                stats.update();
-            };
-        }
         audio.addEventListener("play", () => {
             canvas.style.opacity = "1";
             clearTimeout(idTimeout);
             animate();
+            audioContext.resume();
         });
         audio.addEventListener("pause", () => {
             canvas.style.opacity = "0";
