@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Music Visualizer</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .player{
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1;
+    }
+    body {
+      overflow: hidden;
+      background-color: black;
+      margin: 0px;
+    }
+  </style>
+</head>
+
+<body>
+<div class = "player">
+  <audio id="audio" src="SUPER_RELAKS_DABSTEP_%5BRelax_Dubstep%5D-2014_(RU.MUSIC-LORD.COM).mp3" controls></audio>
+</div>
+
+<script src="index.js"></script>
+<script>
+  
+  MusicVisualizer.init(document.getElementById("audio"), window, true);
+  
+</script>
+</body>
+</html>
